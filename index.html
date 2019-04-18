@@ -11,15 +11,16 @@
     <!-- Montserrat Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="../exercise1/css/exercise1.css">
-  
-    <title>Exercise 2 - Yael Brown</title>
+    <!-- LESS CSS preprocessor -->
+    <link rel="stylesheet/less" type="text/css" href="../exercise1/css/exercise1.less" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>
+      
+    <title>Exercise 3 - Yael Brown</title>
   </head>
   <body>
 
-  <!-- Rollover Navigation -->
-  <div class="rolloverNav">
+    <!-- Rollover Navigation -->
+    <nav class="rolloverNav">
       <ul>
         <li id="home"><a href="http://nova.umuc.edu/~ct386c16/exercise1/index.html">Home</a></li>
         <li><a href="http://nova.umuc.edu/~ct386c16/exercise1/exercise1.html">Exercise 1</a></li>
@@ -27,56 +28,70 @@
         <li><a href="http://nova.umuc.edu/~ct386c16/exercise3/index.html">Exercise 3</a></li>
         <li><a href="http://nova.umuc.edu/~ct386c16/exercise4/index.html">Exercise 4</a></li>
       </ul>
-    </div>
+    </nav>
 
-    <div class="container">
+    <main class="container">
+
+      <!-- Breadcrumbs -->
+      <ul class="breadcrumb">
+        <li><a href="http://nova.umuc.edu/~ct386c16/exercise1/index.html">Home</a></li>
+        <li><a href="#">Exercise 3</a></li>
+      </ul>
+      
+      <!-- Second Javascript animation -->
+      <script>
+        document.addEventListener("click", function changeColorOnClick() {
+          let animate = document.getElementById("animate");
+          animate.style.color = "red";
+          animate.style.transition = "color 1s";
+        });
+      </script>
+          
       <!-- Assignment heading -->
       <div class="classHeading">
-        <h1>Exercise 2</h1>
+        <h1>Exercise 3</h1>
         <h2>CMST 386</h2>
-        <h2>Yael Brown</h2>
+        <h2 id="animate" class="rotate-center">Yael Brown</h2>
       </div>
       
-      <!-- Link to Form -->
-      <a href="http://nova.umuc.edu/~ct386c16/exercise2/form.html"><h3>Link to Form.html</h3></a>
+      <!-- Link to Sitemap -->
+      <a href="./bin/sitemap.xml">Link to SiteMap</a>
+      <br>
+      <a href="../exercise1/css/exercise1.less">Link to LESS file</a>
 
-      <h3>What do you want to learn in this course?</h3>
-      <p>What I want to learn in this course, is more devops engineering type of things. Such as managing a file server and changing permissions of files as I am doing with FileZilla now. Also learning the effects of cache's have on browser content. I understand this is not an advanced course so I won't be learning a lot about Docker and Jenkins. I feel like the low level management aspect is a good foundation.</p>
-      
-      <!-- Video Section -->
-      <div class="video">
-        <h3>Video</h3>
-        <h4>YouTube</h4>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/cus7WYHdQic" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <br>
-        <h4>Alternate Formats</h4>
-        <video controls>
-          <source src="./bin/shortVideo.mp4" type="video/mp4">
-          <soruce src="./bin/shortVideo.webm" type="video/webm">
-          <p>Your browser does not support mp4.</p>
-        </video>
-        <br>
-      </div>
+      <!-- Current Date and Time  -->
+      <h3><span id="displayDateTime"></span>.</h3>
+
+      <!-- Second Javascript animation -->
+      <h4>Second Javascript action - click my name above and it should change colors.</h4>
+
+      <script>
+        // Get current date and time from browser assign as variable
+        currentTime = new Date();
+
+        // Display to "displayDateTime" span
+        document.getElementById("displayDateTime").innerHTML = currentTime;
+      </script>
 
       <!-- SEO -->
       <div class="seo">
         <h3>SEO Section</h3>
-        <h4>5 Links relevant to to the information on this page that link to additional resources that may help me if what I would like to learn in this course. </h4>
-        <ol>
-          <li>What is Devops? - <a href="https://theagileadmin.com/what-is-devops/">https://theagileadmin.com/what-is-devops/</a></li>
-          <li>Devops.com - <a href="https://devops.com/">https://devops.com/</a></li>
-          <li>Understanding Devops - <a href="https://www.redhat.com/en/topics/devops">https://www.redhat.com/en/topics/devops</a></li>
-          <li>What is Devops? (AWS) - <a href="https://aws.amazon.com/devops/what-is-devops/">https://aws.amazon.com/devops/what-is-devops/</a></li>
-          <li>Become Devops Engineer in Six Months or Less (blog) - <a href="https://medium.com/@devfire/how-to-become-a-devops-engineer-in-six-months-or-less-366097df7737">https://medium.com/@devfire/how-to-become-a-devops-engineer-in-six-months-or-less-366097df7737</a></li>
-        </ol>
-      </div>
-            
-      <!-- HTML and CSS Validation Links -->
-      <div class="validation">
-        <a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fnova.umuc.edu%2F~ct386c16%2Fexercise2%2Findex.html">HTML Validation</a><br>
-        <a href="https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fnova.umuc.edu%2F~ct386c16%2Fexercise2%2Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en">CSS</a>
+        <h4>List considerations for building good quality links per this week's readings.</h4>
+          <ul>
+            <li>Does the link have relevance to your web pages topic.</li>
+            <li>If the link refers to a trustworthy site and not a spam website.</li>
+            <li>Getting other websites to link back to your website.</li>
+          </ul>
+        <h4>Describe the importance of an XML sitemap – include one for your current assignment – link it to the index page of Exercise 3</h4>
+        <p>Sitemap is a file that provides the relationship between other pages and files on your website. Sitemaps improve the chances of your website to be indexed into search engines. The sitemap tells website crawlers which files you think are important to your website. </p>
       </div>
 
-    </div>
+    </main>
+                  
+    <!-- HTML and CSS Validation Links -->
+    <footer class="validation">
+      <a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fnova.umuc.edu%2F~ct386c16%2Fexercise3%2Findex.html">HTML Validation</a><br>
+      <a href="https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fnova.umuc.edu%2F~ct386c16%2Fexercise3%2Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en">CSS</a>
+    </footer>
   </body>
 </html>
